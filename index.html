@@ -1,0 +1,64 @@
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Interactive Skill Radar — Trishit</title>
+<meta name="description" content="Interactive one-page CV with animated skill radar, printable resume and downloadable vCard." />
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+<div class="wrap">
+<h1 class="brand">Trishit — Interactive CV</h1>
+<div class="controls">
+<button id="themeToggle" aria-label="Toggle theme">🌙</button>
+<a class="btn" href="#contact">Contact</a>
+</div>
+</div>
+</header>
+
+
+<main class="wrap main-grid">
+<section class="profile">
+<img class="avatar" src="assets/avatar-placeholder.png" alt="Trishit avatar">
+<h2>Trishit</h2>
+<p class="role">3rd-year Student — Web Dev &amp; DSA Enthusiast</p>
+<p class="bio">I build small, fast interfaces focused on clarity and accessibility. This interactive CV demonstrates front-end skills and provides a printable resume.</p>
+
+
+<div class="actions">
+<button id="downloadVcard" class="btn">Download vCard</button>
+<a class="btn ghost" href="#projects">View Projects</a>
+</div>
+
+
+<dl class="contact-list" id="contact">
+<dt>Email</dt><dd>your.email@example.com</dd>
+<dt>Location</dt><dd>Kolkata, India</dd>
+</dl>
+</section>
+
+
+<section class="radar-section">
+<h3>Skill Radar</h3>
+<p class="muted">Percent values are subjective — designed to communicate strengths at a glance.</p>
+
+
+<div class="radar-wrap" aria-hidden="true">
+<div id="radar" class="radar" role="img" aria-label="Skill radar visualization"></div>
+<ul class="legend" id="legend">
+<!-- items injected by JS -->
+</ul>
+</div>
+
+
+<div class="radar-controls">
+<button id="animateBtn" class="small">Animate</button>
+<label class="small" style="display:inline-flex;gap:.5rem;align-items:center"><input id="showPercent" type="checkbox" checked> Show %</label>
+</div>
+
+
+<section class="projects">
+</html>
