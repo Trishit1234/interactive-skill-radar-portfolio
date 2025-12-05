@@ -1,0 +1,44 @@
+```css
+.main-grid{display:grid;grid-template-columns:300px 1fr;gap:1.25rem;padding:2rem 0}
+.profile{background:var(--panel);padding:1rem;border-radius:12px}
+.avatar{width:100%;border-radius:10px;background:linear-gradient(180deg,#0d1b2a,#072033);height:160px;object-fit:cover}
+.role{color:var(--muted);margin:.25rem 0}
+.actions{display:flex;gap:.5rem;margin:1rem 0}
+.contact-list{margin:1rem 0 0;padding:0}
+.contact-list dt{font-weight:700}
+.contact-list dd{margin:0 0 0.5rem 0;color:var(--muted)}
+.radar-section{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:1rem;border-radius:12px}
+.radar-wrap{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.radar{width:320px;height:320px;border-radius:50%;position:relative;box-shadow:0 10px 30px rgba(2,6,23,0.6);overflow:hidden}
+.legend{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.5rem}
+.legend li{display:flex;align-items:center;gap:.6rem}
+.legend .dot{width:14px;height:14px;border-radius:50%;flex:0 0 14px}
+.muted{color:var(--muted)}
+.projects ul{margin:.5rem 0 0 1rem}
+.resume-print{background:var(--panel);padding:1rem;border-radius:12px}
+.print-actions{margin:.5rem 0}
+.foot{border-top:1px solid rgba(255,255,255,0.03);padding:1rem 0;text-align:center;color:var(--muted)}
+
+
+/* Theme dark/light toggles */
+:root.light{--bg:#f6f9fb;--panel:#ffffff;--muted:#475569;--accent:#0ea5a4;color:#0b1220}
+body.light{background:var(--bg);color:var(--panel)}
+
+
+/* Legend color examples (JS will set inline styles) */
+
+
+/* Print rules */
+@media print{
+body *{visibility:visible}
+.btn,#themeToggle,#animateBtn,#downloadVcard{display:none}
+.main-grid{grid-template-columns:1fr}
+.radar{box-shadow:none}
+}
+
+
+/* Responsive */
+@media (max-width:880px){
+.main-grid{grid-template-columns:1fr;}
+.radar{width:260px;height:260px;margin:0 auto}
+}
